@@ -1,11 +1,12 @@
 @keyframes zoomin {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
+    opacity: 0;
     transform: translateY(-50%) translateZ(-180em);
   }
 
   10% {
-    filter: blur(20px);
+    filter: blur(10px);
   }
 
   90% {
@@ -13,17 +14,20 @@
   }
 
   100% {
+    opacity: 1;
     transform: translateY(-50%) translateZ(0);
   }
 }
 
-@keyframes fadein {
+@keyframes stepup {
   0% {
     opacity: 0;
+    transform: translateZ(-1000px);
   }
 
   100% {
     opacity: 1;
+    transform: translateZ(0);
   }
 }
 
@@ -46,13 +50,13 @@ a {
 }
 
 .header-container {
-  animation-duration: 3s, 2s;
-  animation-name: zoomin, fadein;
-  animation-timing-function: cubic-bezier(.72,0,0,1), ease-in;
+  animation-duration: 3s;
+  animation-name: zoomin;
+  animation-timing-function: cubic-bezier(.72,0,0,1);
   left: 50%;
   margin-left: -110px;
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   text-align: center;
   text-shadow: 0px 0px 6px #FFE600;
@@ -66,14 +70,39 @@ a {
   font-weight: normal;
   line-height: 0.8;
   margin-left: -25px;
+  perspective: 1000px;
   position: relative;
   transform: rotate(-3.93deg);
 }
 
-.header::after {
+.header span {
+  animation-duration: 0.9s;
+  animation-name: stepup;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(.72,0,0,1);
+  left: 90px;
+  margin-top: -90px;
+  position: absolute;
+  transform: translateZ(0);
+}
+
+.header span:first-child {
+  left: 45px;
+  animation-duration: 0.8s;
+  animation-delay: 1.12s;
+}
+
+.header span:last-child {
+  left: 143px;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+}
+
+.header span:last-child::after {
   content: '.';
   font-size: 30px;
-  right: 10px;
+  right: -35px;
   line-height: 2.1;
   position: absolute;
 }
