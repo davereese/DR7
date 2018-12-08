@@ -31,6 +31,16 @@
   }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 html {
   height: 100%;
@@ -47,6 +57,10 @@ body {
 
 a {
   color: #fff;
+}
+
+img {
+    border: none;
 }
 
 .header-container {
@@ -125,4 +139,23 @@ a {
   font-size: 0px;
   letter-spacing: 0;
   visibility: hidden;
+}
+
+aside {
+    margin-top: 10vh;
+}
+
+.featured-project {
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+    animation-name: fadeIn;
+    animation-delay: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.seattle-beer {
+    width: 250px;
 }
