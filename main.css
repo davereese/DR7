@@ -1,18 +1,9 @@
 @keyframes zoomin {
   0% {
-    filter: blur(10px);
     opacity: 0;
     transform: translateY(-50%) translateZ(-180em);
   }
-
-  10% {
-    filter: blur(10px);
-  }
-
-  90% {
-    filter: blur(0);
-  }
-
+  
   100% {
     opacity: 1;
     transform: translateY(-50%) translateZ(0);
@@ -87,6 +78,7 @@ img {
   perspective: 1000px;
   position: relative;
   transform: rotate(-3.93deg);
+  transform-style: preserve-3d;
 }
 
 .header span {
