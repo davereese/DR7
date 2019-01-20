@@ -134,20 +134,27 @@ img {
 }
 
 aside {
-    margin-top: 10vh;
+  margin-top: 10vh;
 }
 
 .featured-project {
-    position: absolute;
-    left: 0;
-    margin-left: -20px;
-    animation-name: fadeIn;
-    animation-delay: 3.5s;
-    animation-timing-function: ease-in-out;
-    animation-duration: 1.5s;
-    animation-fill-mode: both;
+  position: absolute;
+  left: 0;
+  margin-left: -20px;
+  animation-name: fadeIn;
+  animation-delay: 3.5s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
 }
 
 .seattle-beer {
-    width: 250px;
+  width: 250px;
+}
+
+.beerforge {
+  top: 210px;
+  margin-left: -15px;
+  width: 220px;
+  animation-delay: 4.5s;
 }
