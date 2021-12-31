@@ -5,11 +5,11 @@
   --input-bg: rgba(55, 55, 55, 0.8);
   --background-dark: #141414;
   --juicy: #C200FA;
+  --vital: #76CC04;
   --uppermore: #FFBF01;
-}
-
-.text-juicy {
-  color: var(--juicy);
+  --rapid: #0BD4D4;
+  --prime: #DF4520;
+  --ablaze: #FF7401;
 }
 
 html {
@@ -32,6 +32,26 @@ body {
 
 body.juicy {
   border-top: 4px solid var(--juicy);
+}
+
+body.vital {
+  border-top: 4px solid var(--vital);
+}
+
+body.uppermore {
+  border-top: 4px solid var(--uppermore);
+}
+
+body.ablaze {
+  border-top: 4px solid var(--ablaze);
+}
+
+body.rapid {
+  border-top: 4px solid var(--rapid);
+}
+
+body.prime {
+  border-top: 4px solid var(--prime);
 }
 
 section {
@@ -162,6 +182,26 @@ input.juicy:focus {
   box-shadow: inset 0 -3px 0 var(--juicy);
 }
 
+input.uppermore:focus {
+  box-shadow: inset 0 -3px 0 var(--uppermore);
+}
+
+input.vital:focus {
+  box-shadow: inset 0 -3px 0 var(--vital);
+}
+
+input.ablaze:focus {
+  box-shadow: inset 0 -3px 0 var(--ablaze);
+}
+
+input.prime:focus {
+  box-shadow: inset 0 -3px 0 var(--prime);
+}
+
+input.rapid:focus {
+  box-shadow: inset 0 -3px 0 var(--rapid);
+}
+
 button {
   position: relative;
   height: 40px;
@@ -186,6 +226,26 @@ button:hover {
 
 button.juicy {
   background-color: var(--juicy);
+}
+
+button.vital {
+  background-color: var(--vital);
+}
+
+button.uppermore {
+  background-color: var(--uppermore);
+}
+
+button.prime {
+  background-color: var(--prime);
+}
+
+button.rapid {
+  background-color: var(--rapid);
+}
+
+button.ablaze {
+  background-color: var(--ablaze);
 }
 
 .button-container {
