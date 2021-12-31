@@ -12,11 +12,24 @@
     <section>
       <img src="../images/upshot-juicy.svg" alt="Upshot" id="logo" />
       <div class="tag">by <a href="https://twitter.com/_marisOtter" target="_blank">@_marisOtter</a></div>
-      <form action="https://formsubmit.co/76e4d6d55beb202dd81eceb64cb50c2c" method="POST">
-        <input type="text" name="name" required>
-        <input type="email" name="email" required>
-        <button type="submit">Send</button>
+      <form action="https://formsubmit.co/76e4d6d55beb202dd81eceb64cb50c2c" method="POST" class="form">
+        <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Juicy Activation">
+        <label>
+          Token ID <i class="info"><div class="tooltip">The token ID of the nft purchased on Opensea (available in the details section).<img src="../images/opensea-token-id-example.png" alt="Example" /></div></i><br />
+          <input type="text" name="tokenId" class="juicy" autocomplete="off" required>
+        </label>
+        <label>
+          Email address <i class="info"><div class="tooltip">This addess will never be saved - only ever used to send you your copy of Upshot. Make sure this is an address you have access to!</div></i><br />
+          <input type="email" name="email" class="juicy" autocomplete="off" required>
+        </label>
+        <div class="button-container">
+          <button type="submit" class="juicy">Veriify</button>
+        </div>
       </form>
     </section>
+    <script src="../upshot.js"></script>
   </body>
 </html>

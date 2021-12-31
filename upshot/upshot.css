@@ -2,6 +2,8 @@
 
 :root {
   --light-text: #949494;
+  --input-bg: rgba(55, 55, 55, 0.8);
+  --background-dark: #141414;
   --juicy: #C200FA;
   --uppermore: #FFBF01;
 }
@@ -12,6 +14,7 @@
 
 html {
   height: 100%;
+  background-color: #282828;
 }
 
 body {
@@ -24,6 +27,7 @@ body {
   background: linear-gradient(180deg, #282828 0%, #232323 100%);
   font-family: 'Inter', sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
 body.juicy {
@@ -35,9 +39,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 550px;
+  width: 300px;
   padding: 30px;
-  margin: 0;
+  margin: -50px 0 0;
 }
 
 #logo {
@@ -47,7 +51,7 @@ section {
 .tag {
  position: absolute;
  top: 86px;
- left: 297px;
+ left: 173px;
  font-size: 11px;
  color: var(--light-text);
  z-index: 1;
@@ -56,4 +60,159 @@ section {
 .tag a {
  color: var(--light-text);
  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 30px;
+}
+
+label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  color: #CCCCCC;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+label sup {
+  color: var(--highlight);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+label i.info {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16px' height='16px'%3E%3Cpath d='M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 11 7 L 11 9 L 13 9 L 13 7 L 11 7 z M 11 11 L 11 17 L 13 17 L 13 11 L 11 11 z'/%3E%3C/svg%3E");
+  cursor: pointer;
+  font-style: normal;
+}
+
+label .tooltip {
+  opacity: 0;
+  position: absolute;
+  padding: 15px 25px;
+  width: 300px;
+  left: -25px;
+  bottom: calc(100% + 12px);
+  background: var(--background-dark);
+  border-radius: 4px;
+  color: var(--light-text);
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 500;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+label .tooltip::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  left: 27px;
+  background: var(--background-dark);
+  transform: rotate(45deg);
+}
+
+label .tooltip.show {
+  opacity: 1;
+}
+
+label .tooltip img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+input {
+  position: relative;
+  padding: 15px;
+  margin: 10px 0;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: white;
+  box-shadow: inset 0 -3px 0 transparent;
+  font-family: 'Inter', sans-serif;
+  transition: box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.juicy:focus {
+  box-shadow: inset 0 -3px 0 var(--juicy);
+}
+
+button {
+  position: relative;
+  height: 40px;
+  padding: 0 25px;
+  border: 0;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 white;
+  transition: box-shadow 0.25s ease;
+  z-index: 1;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 3px white;
+}
+
+button.juicy {
+  background-color: var(--juicy);
+}
+
+.button-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-container button {
+  width: 100%;
+}
+
+.thanks {
+  margin-top: 30px;
+  padding: 30px;
+  background: var(--input-bg);
+  border: 1px solid var(--background-dark);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.thanks p {
+  margin: 0;
+  color: var(--light-text);
+}
+
+.thanks p span {
+  display: block;
+  margin: 0 0 10px;
+  color: white;
 }
